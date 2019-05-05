@@ -1,0 +1,35 @@
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li class="is-active">
+      <a href="/login" aria-current="page">Login</a>
+    </li>
+  </ul>
+</nav>
+
+<form class="column is-4" action="/users/login" method="POST">
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+      <input class="input" type="email" placeholder="Email" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left">
+      <input class="input" type="password" placeholder="Password" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control">
+      <button class="button is-success">
+        Login
+      </button>
+    </p>
+  </div>
+  <p>No account? <a href="/users/register">Register</a></p>
+</form>

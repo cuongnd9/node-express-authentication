@@ -1,14 +1,19 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 
-const homeRoute = require('./routes/index');
+const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
 
 const app = express();
 
 const port = process.env.PORT || 6969;
 
+// EJS.
+app.set('view engine', 'ejs');
+app.use(expressLayouts)
+
 // Routes.
-app.use('/', homeRoute);
+app.use('/', indexRoute);
 app.use('/users', usersRoute);
 
 app.listen(port, () => {

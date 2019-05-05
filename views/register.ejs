@@ -1,0 +1,59 @@
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li class="is-active">
+      <a href="/register" aria-current="page">Register</a>
+    </li>
+  </ul>
+</nav>
+
+<form class="column is-4" action="/users/register" method="POST">
+  <div class="field">
+    <label class="label">Name</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-info" type="text" placeholder="Name" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+      </span>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-info" type="email" placeholder="Email" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-info" type="password" placeholder="Password" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Confirm Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input
+        class="input is-info"
+        type="password"
+        placeholder="Confirm Password"
+      />
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+  </div>
+  <div class="field">
+    <p class="control">
+      <button class="button is-success">
+        Register
+      </button>
+    </p>
+  </div>
+  <p>Have an account? <a href="/users/login">Login</a></p>
+</form>
