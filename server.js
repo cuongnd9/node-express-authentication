@@ -6,9 +6,13 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
 
 const indexRoute = require('./routes/index');
 const usersRoute = require('./routes/users');
+
+// Passport config.
+require('./config/passport')(passport);
 
 const app = express();
 
@@ -37,10 +41,15 @@ app.use(
 // Flash.
 app.use(flash());
 
+// Passport.
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Global variables.
 app.use((req, res, next) => {
   res.locals.successMessage = req.flash('successMessage');
   res.locals.errorMessage = req.flash('errorMessage');
+  res.locals.error = req.flash('error');
   next();
 });
 
