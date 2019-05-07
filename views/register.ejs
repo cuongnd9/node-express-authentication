@@ -68,11 +68,7 @@
       </span>
     </div>
   </div>
-  <% if (typeof errors !== 'undefined') { %>
-    <% errors.map(function(error) { %>
-      <p class="help is-danger"><%= error.message %></p>
-    <% }) %>
-  <% } %>
+  <% include message %>
   <div class="field">
     <p class="control">
       <button class="button is-success">

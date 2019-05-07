@@ -1,0 +1,13 @@
+<% if (typeof errors !== 'undefined') { %>
+  <% errors.map(function(error) { %>
+    <p class="help is-danger"><%= error.message %></p>
+  <% }) %>
+<% } %>
+
+<% if (successMessage) { %>
+  <p class="help is-success"><%= successMessage %></p>
+<% } %>
+
+<% if (errorMessage) { %>
+  <p class="help is-warning"><%= errorMessage %></p>
+<% } %>
